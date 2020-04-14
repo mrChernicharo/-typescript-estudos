@@ -1,0 +1,370 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf840
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 FiraCode-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green121\blue165;\red0\green45\blue153;\red0\green121\blue165;
+\red0\green45\blue153;\red0\green0\blue0;\red246\green246\blue239;\red252\green93\blue186;\red30\green31\blue41;
+\red246\green246\blue239;\red228\green242\blue113;\red238\green252\blue122;\red30\green31\blue41;\red252\green93\blue186;
+\red72\green255\blue104;\red253\green170\blue90;\red174\green122\blue247;\red124\green228\blue254;\red124\green228\blue252;
+\red124\green228\blue252;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c47451\c64706;\csgenericrgb\c0\c17647\c60000;\csgenericrgb\c0\c47451\c64706;
+\csgenericrgb\c0\c17647\c60000;\csgenericrgb\c0\c0\c0;\cssrgb\c97255\c97255\c94902;\cssrgb\c100000\c47451\c77647;\cssrgb\c15686\c16471\c21176;
+\cssrgb\c97255\c97255\c94902;\cssrgb\c91373\c94902\c51765;\cssrgb\c94510\c98039\c54902;\cssrgb\c15686\c16471\c21176;\cssrgb\c100000\c47451\c77647;
+\cssrgb\c31373\c98039\c48235;\cssrgb\c100000\c72157\c42353;\cssrgb\c74118\c57647\c97647;\cssrgb\c54510\c91373\c99608;\cssrgb\c54510\c91373\c99216;
+\cssrgb\c54510\c91373\c99216;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20600\viewh16180\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 M\'f3dulo 04 => TypeScript\
+\
+
+\b [1] Vantagens TypeScrip
+\b0 t\
+\
+TS \'e9 uma linguagem totalmente baseda em JS por\'e9m, ela adiciona
+\b  tipagens
+\b0  e nos permite usar as features mais modernas do ES sem ficar dependendo do Browser.\
+\
+Por que TypeScript?\
+\
+1. Ajuda a saber o formato das informa\'e7\'f5es auxiliando o Intellisense.\
+Ex: Qual o formato do Objeto? Quais informa\'e7\'f5es est\'e3o inclu\'eddas ali dentro? Como \'e9 essa estrurura?\
+\
+2. J\'e1 o TS \'e9 fracamente tipado. Ele adiciona tipagem apenas nas informa\'e7\'f5es em que o editor n\'e3o \'e9 capaz de determinar o tipo sozinho.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Linguagens fortemente tiradas como Java e C# precisam que a tipagem seja declarada em todas as vari\'e1veis.\
+\
+3. O mercado est\'e1 valorizando profissionais que usam TS, pois a linguagem adiciona seguran\'e7a e facilita muito a manuten\'e7\'e3o\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\b [2] Configurando o Projeto
+\b0 \
+\
+1. Come\'e7amos criando a nova pasta 04.typeScript e dando um 
+\i\b  \cf2 yarn init -y\cf3  
+\i0\b0  \cf0 pra criar nosso package.json\
+\
+2. J\'e1 na pasta, damos um 
+\i\b  \cf4 yarn add typescript -D\cf5  
+\i0\b0 \cf0 para instalar a extens\'e3o TypeScript na nossa depend\'eancia de desenvolvimento. Repare que o 
+\b yarn.lock
+\b0  \'e9 criado automaticamente\
+\
+3.crie uma pasta src e dentro dela nosso arquivo index.ts.\
+No arquivo TS j\'e1 \'e9 poss\'edvel usar sintaxe mais moderna independente do nodeJS que ainda n\'e3o tem algumas das features mais modernas, por exemplo o comando \'91import\'92 (no node precisa fazer com \'91require\'92)\
+\
+4. Instale o express 
+\i\b \cf4 yarn add express
+\i0\b0 \cf0  e importe ele no index.ts \
+
+\f1 \cf6 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf8 \cb9 \outl0\strokewidth0 \strokec8 import\cf10 \strokec10  express, \{ request \} \cf8 \strokec8 from\cf10 \strokec10  \cf11 \strokec11 '\cf12 \strokec12 express\cf11 \strokec11 '\cf10 \strokec10 ;\cb1 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13 \outl0\strokewidth0  \cf14 \cb13  								    \cf10 \cb1 \outl0\strokewidth0 \strokec10  \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf8 \cb9 \strokec8 const\cf10 \strokec10  app \cf8 \strokec8 =\cf10 \strokec10  \cf15 \strokec15 express\cf10 \strokec10 ();				    \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf6 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 4. Repare que quando vamos escrever a pr\'f3xima linha ( 
+\f1 \cf6 \expnd0\expndtw0\kerning0
+app.listen() 
+\f0 \cf0 \kerning1\expnd0\expndtw0 ) o intellisense n\'e3o nos d\'e1 sugest\'f5es de autocomplete. Isso acontece pq a IDE n\'e3o consegue identificar o declaration file do m\'f3dulo Express e isso fica simbolizado com tr\'eas pontinhos embaixo do \'91express\'92 l\'e1 em cima no import. O pr\'f3prio Intellisense acusa que devemos instalar o 
+\b pacote de declara\'e7\'e3o de tipos 
+\b0 do express, ou ent\'e3o criar-lo n\'f3s mesmos.\
+\
+Os pacotes de declara\'e7\'e3o de tipos s\'e3o arquivos que cont\'e9m todas as informa\'e7\'f5es necess\'e1rias para que a nossa IDE consiga compreender os tipos das vari\'e1veis usados pelo pacote, habilitando assim o autocomplete para os comandos do pacote. \
+\
+Ou seja, sempre que tivermos os 
+\b tr\'eas pontinhos
+\b0  sob o nome de um pacote, vamos instalar seu respectivo pacote  de declara\'e7\'e3o de tipos, em depend\'eancia de desenvolvimento.\
+Ex:  
+\i\b \cf4 yarn add -D @types/ <pacote>
+\f1\i0\b0 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf10 \
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 5. Vamos ent\'e3o instalar o pacote de declara\'e7\'f5es de tipos do Express:\
+\
+					 
+\i\b \cf4 yarn add -D @types/express
+\i0\b0 \cf0 \
+\
+Pronto! Repare que os tr\'eas pontinhos foram embora! Agora j\'e1 temos todas as sugest\'f5es de autocomplete ao usar app. \'85\
+\
+6. Vamos ent\'e3o criar uma rota b\'e1sica pra testar:\
+\
+
+\f1 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 import\cf10 \strokec10  express, \{ request \} \cf8 \strokec8 from\cf10 \strokec10  \cf11 \strokec11 '\cf12 \strokec12 express\cf11 \strokec11 '\cf10 \strokec10 ;\cf7 \cb13 \outl0\strokewidth0                 \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13 \outl0\strokewidth0                                                    \cf7 \cb13         \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf8 \cb9 \strokec8 const\cf10 \strokec10  app \cf8 \strokec8 =\cf10 \strokec10  \cf15 \strokec15 express\cf10 \strokec10 ();\cf7 \cb13 \outl0\strokewidth0                                      \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13 \outl0\strokewidth0                                                            \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf10 \cb9 app.\cf15 \strokec15 get\cf10 \strokec10 (\cf11 \strokec11 '\cf12 \strokec12 /\cf11 \strokec11 '\cf10 \strokec10 , (\cf16 \strokec16 request\cf10 \strokec10 , \cf16 \strokec16 response\cf10 \strokec10 ) \cf8 \strokec8 =>\cf10 \strokec10  \{\cf7 \cb13 \outl0\strokewidth0                       \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   \cf8 \strokec8 return\cf10 \strokec10  response.\cf15 \strokec15 json\cf10 \strokec10 (\{ message\cf8 \strokec8 :\cf10 \strokec10  \cf11 \strokec11 '\cf12 \strokec12 Hello World!\cf11 \strokec11 '\cf10 \strokec10  \})\cf7 \cb13 \outl0\strokewidth0         \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9 \})\cf7 \cb13 \outl0\strokewidth0                                                          \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9 app.\cf15 \strokec15 listen\cf10 \strokec10 (\cf17 \strokec17 3333\cf10 \strokec10 );\cf7 \cb13 \outl0\strokewidth0                                           \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+Ao tentar iniciar com 
+\i\b \cf4 node src/index.ts  
+\i0\b0 \cf0 teremos um erro pois o Node por si s\'f3 n\'e3o conhece typescript, ele entende apenas Javascript. Assim, precisaremos converter esse arquivo typescript em um arquivo JS pro Node poder entender.\
+\
+Pra cumprir a tarefa, vamos utilizar aquela extens\'e3o typescript que j\'e1 instalamos. Isso pq essa extens\'e3o nos fornece um arquivo bin\'e1rio (no diret\'f3rio .bin dentro de node_modules) que faz essa convers\'e3o \
+\
+						
+\i\b \cf4 yarn tsc src/index.ts\
+
+\i0\b0 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Com isso \'e9 criado automaticamente um arquivo
+\b  index.js
+\b0  contendo todo nosso c\'f3digo j\'e1 convertido pra JS tradicional num padr\'e3o compreens\'edvel pro Node.\
+\
+Por\'e9m, apesar do sucesso na cria\'e7\'e3o do 
+\b index.js
+\b0 , temos um erro no terminal\
+\
+7. O erro aconteceu pq n\'e3o inicializamos o TS na raiz do nosso projeto e assim, ainda n\'e3o h\'e1 configura\'e7\'f5es pra ele se basear na hora de converter o c\'f3digo\
+\
+Pra resolver, vamos dar um  
+\i\b \cf4 yarn tsc \'97init  
+\i0\b0 \cf0 na ra\'edz do projeto e repare que o arquivo
+\b  \cf6 tsconfig.json
+\b0 \cf0  \'e9 criado. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+8. Agora com esse arquivo criado, j\'e1 podemos dar um 
+\i\b \cf4 yarn tsc 
+\i0\b0 \cf0  que a convers\'e3o j\'e1 vai rolar bonito, sendo feita com perfei\'e7\'e3o\
+E a\'ed, pra acessar nossa aplica\'e7\'e3o, basta dar um  
+\i\b \cf4 node src/index.js  
+\i0\b0 \cf0 que ela j\'e1 estar\'e1 executando em 
+\b localhost:3333
+\b0 .\
+\
+\
+9. Melhorando a estrutura do projeto: Vamos tirar o arquivo index.js da pasta src pois n\'e3o vamos ficar mexendo nele. Pode at\'e9 deletar\
+\
+10. E a\'ed, indo no 
+\b \cf6 tsconfig.json, 
+\b0 \cf0  vamos descomentar e editar a linha \'93ourDir\'94 pra ficar assim:\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1 \cf18 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec18 "\cf19 \strokec19 outDir\cf18 \strokec18 "\cf8 \strokec8 :\cf10 \strokec10  \cf11 \strokec11 "\cf12 \strokec12 ./dist\cf11 \strokec11 "\cf10 \strokec10 ,  \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+E agora, quando damos um 
+\i\b \cf4 yarn tsc 
+\i0\b0 \cf0 automaticamente \'e9 gerada uma pasta 
+\b dist 
+\b0 e l\'e1 dentro estar\'e1 nosso index.js.\
+A ideia \'e9 que esse diret\'f3rio dist possua a mesma estrutura da pasta 
+\b src
+\b0 \
+\
+\
+
+\b [3] Quando adicionar tipos \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0 \cf0 Por que as vezes o VSCode oferece autocomplete, pq outras vezes n\'e3o?\
+\'c9 preciso entender de onde v\'eam essas defini\'e7\'f5es de tipos de cada vari\'e1vel do nosso c\'f3digo.\
+Por exemplo: Lembra do 
+\b @types/express
+\b0 ? Ele \'e9 o arquivo de defini\'e7\'e3o de tipos do pacote express.
+\b \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0 \cf0 Para ir ao arquivo onde \'e9 feita a defini\'e7\'e3o de tipo de uma determinada vari\'e1vel no VSCode, podemos dar um Command + click sobre a vari\'e1vel que seremos direcionados para o arquivo onde essa defini\'e7\'e3o \'e9 feita.\
+Ex: dar um command  + click sobre a vari\'e1vel express nos vai direcionar pra o arquivo 
+\b index.d.ts,
+\b0  dentro da pasta @types dentro de node_modules \
+\
+Arquivos .d s\'e3o arquivos de defini\'e7\'e3o.\
+\
+Ex: Passar o mouse sobre a vari\'e1vel express nos informa que a vari\'e1vel \'e9 na verdade uma function\
+ 
+\f1 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 function\cf10 \strokec10  \cf15 \strokec15 express\cf10 \strokec10 ()\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 core\cf10 \strokec10 .\cf19 \strokec19 Express
+\f0\b \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0 \cf0 e a\'ed, cada novo command + click nos conduzir\'e1 \'e0 informa\'e7\'e3o que est\'e1 rolando por debaixo dos panos da vari\'e1vel em quest\'e3o.\
+\
+Via de regra, o Editor sempre nos vai avisar quando precisa tipar uma vari\'e1vel. Isso acontece quando ele retorna 
+\b <any>
+\b0  e n\'e3o encontra sugest\'f5es de m\'e9todos para fazer o autocomplete\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+[
+\b 4] Tipando Objetos e Arrays\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0 \cf0 Vamos iniciar criando a 
+\b pasta services
+\b0  dentro de 
+\b src
+\b0 . Essa pasta vai conter o arquivo 
+\b createUser.ts
+\b0  que vai conter uma fun\'e7\'e3o respons\'e1vel para a Cria\'e7\'e3o de Usu\'e1rios dentro do nosso app.\
+\
+Vale lembrar que a ideia da pasta services \'e9 abrigar scripts que nos disponibilizam alguma funcionalidade. Esses scripts dever\'e3o ent\'e3o ser importados sempre que a gente precisar. Outro detalhe \'e9 que cada arquivo na pasta deve possuir 
+\b apenas uma fun\'e7\'e3o 
+\b0 bem espec\'edfica.\
+\
+1. Crie a pasta services dentro de src e l\'e1, o arquivo createUser.ts\
+\
+2. Crie no arquivo a export default function createUser:\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 export\cf10 \strokec10  \cf8 \strokec8 default\cf10 \strokec10  \cf8 \strokec8 function\cf10 \strokec10  \cf15 \strokec15 createUser\cf10 \strokec10 (\cf16 \strokec16 nome\cf10 \strokec10 , \cf16 \strokec16 email\cf10 \strokec10 , \cf16 \strokec16 password\cf10 \strokec10 ) \{	\cb1 \
+\cb9   \cf8 \strokec8 const\cf10 \strokec10  user \cf8 \strokec8 =\cf10 \strokec10  \{ 										\cb1 \
+\cb9     nome,												\cb1 \
+\cb9     email,											\cb1 \
+\cb9     password,      									     \cb1 \
+\cb9   \}													\cb1 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13 \outl0\strokewidth0 													\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf10 \cb9   \cf8 \strokec8 return\cf10 \strokec10  user											\cb1 \
+\cb9 \}\cf7 \cb13 \outl0\strokewidth0 													\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+Repare que temos problemas com as vari\'e1veis nome, email e password. O editor n\'e3o consegue saber quais os tipos dessas vari\'e1veis.\
+\
+3. Podemos solucionar isso especificando o tipo de dado que esperamos receber logo na declara\'e7\'e3o\
+Das vari\'e1veis. Assim:\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 export\cf10 \strokec10  \cf8 \strokec8 default\cf10 \strokec10  \cf8 \strokec8 function\cf10 \strokec10  \cf15 \strokec15 createUser\cf10 \strokec10 (\cf16 \strokec16 nome\cf8 \strokec8 :\cf10 \strokec10  \cf11 \strokec11 ''\cf10 \strokec10 , \cf16 \strokec16 email\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 , \cf16 \strokec16 password\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 ) \{\cb1 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Aqui estamos dizendo que todas as vari\'e1veis devem ser strings, sendo que nome \'e9 um string n\'e3o obrigat\'f3rio.\
+\
+Essa pr\'e1tica vai ajudar muito pois ao chamar a function createUser num outro script qualquer, teremos o Intellisense nos informando quais tipos de par\'e2metros precisamos passar para que a fun\'e7\'e3o seja executada corretamente.\
+\
+4. Uma outra forma legal de fazer isso \'e9 utilizando a desestrutura\'e7\'e3o, passando para a fun\'e7\'e3o um objeto contendo todas as vari\'e1veis que precisamos receber.\
+Entretanto para que isso funcione, \'e9 necess\'e1rio criar uma vari\'e1vel separada. Esta vari\'e1vel \'e9 uma 
+\b interface. 
+\b0 \
+\
+A 
+\b interface
+\b0  \'e9 basicamente uma forma de definir os tipos de um conjunto de informa\'e7\'f5es.\
+Normalmente esse conjunto \'e9 um objeto.\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 interface\cf10 \strokec10  \cf19 \strokec19 createUserData\cf10 \strokec10  \{\cf7 \cb13 \outl0\strokewidth0                                                             \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf10 \cb9   nome\cf8 \strokec8 ?\cf10 \strokec10  \cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 ,\cf7 \cb13 \outl0\strokewidth0                                                                      \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   email\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 ,\cf7 \cb13 \outl0\strokewidth0                                                                       \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   password\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 ,\cf7 \cb13 \outl0\strokewidth0                                                                    \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9 \}                   \cf7 \cb13 \outl0\strokewidth0                                                                   \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13 \outl0\strokewidth0                                                                                       \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf8 \cb9 \strokec8 export\cf10 \strokec10  \cf8 \strokec8 default\cf10 \strokec10  \cf8 \strokec8 function\cf10 \strokec10  \cf15 \strokec15 CreateUser\cf10 \strokec10 (\{\cf16 \strokec16 nome\cf10 \strokec10  \cf8 \strokec8 =\cf10 \strokec10  \cf11 \strokec11 ''\cf10 \strokec10 , \cf16 \strokec16 email\cf10 \strokec10 , \cf16 \strokec16 password\cf10 \strokec10  \}\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 createUserData\cf10 \strokec10  ) \{\cf7 \cb13 \outl0\strokewidth0   \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf10 \cb9   \cf8 \strokec8 const\cf10 \strokec10  user \cf8 \strokec8 =\cf10 \strokec10  \{ \cf7 \cb13 \outl0\strokewidth0                                                                      \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9     nome,\cf7 \cb13 \outl0\strokewidth0                                                                              \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9     email,\cf7 \cb13 \outl0\strokewidth0                                                                             \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9    password, \cf7 \cb13 \outl0\strokewidth0                                                                          \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   \}\cf7 \cb13 \outl0\strokewidth0                                                                                    \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13 \outl0\strokewidth0                                                                                       \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf10 \cb9   \cf8 \strokec8 return\cf10 \strokec10  user\cf7 \cb13 \outl0\strokewidth0                                                                          \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9 \}\cf7 \cb13 \outl0\strokewidth0                                                                                      \cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Assim, acima temos a cria\'e7\'e3o da nossa interface createUserData, que cont\'e9m a forma em que devem ser preenchidas as informa\'e7\'f5es da function crateUser. \
+Repare a \'93?\'94 Ap\'f3s o nome indicando que essa vari\'e1vel pode ser tanto do tipo string quanto undefined.\
+Pra evitar o undefined passamos o valor padr\'e3o \'91 \'92  na declara\'e7\'e3o da function, mas isso n\'e3o \'e9 necess\'e1rio a priori.\
+\
+Seguindo essa pr\'e1tica, n\'e3o importa onde na aplica\'e7\'e3o, sempre teremos um autocomplete nos informando qual o tipo de par\'e2metro vamos passar pra fun\'e7\'e3o createUser, seja na chamada da fun\'e7\'e3o, seja ao dar um console.log\'85enfim. Vamos sentir a vantagem disso conforme avan\'e7amos no curso.\
+\
+5. Tipagem de arrays:\
+\
+Digamos que nosso user passe a ter mais um atributo \'91techs\'92, que \'e9 um array.\
+\
+Se os dados do array techs forem todos do mesmo tipo, l\'e1 na nossa interface poder\'edamos fazer assim\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1 \cf14 \cb13 \expnd0\expndtw0\kerning0
+interface\cf7 \cb13  \cf20 \cb13 CreateUserData\cf7 \cb13  \{    			     \cf7 \cb1 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13   nome\cf14 ?\cf7  \cf14 :\cf7  \cf20 string\cf7 ,\cf7 \cb13   							\cf7 \cb1 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13   email\cf14 \cb13 :\cf7 \cb13  \cf20 \cb13 string\cf7 \cb13 ,   							\cf7 \cb1 \
+\cf7 \cb13   password\cf14 \cb13 :\cf7 \cb13  \cf20 \cb13 string\cf7 \cb13 ,							\cf7 \cb1 \
+\cf7 \cb13   \cf10 \cb9 \outl0\strokewidth0 \strokec10 techs\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 Array\cf10 \strokec10 <\cf19 \strokec19 string\cf10 \strokec10 >,						\cb1  \cf7 \outl0\strokewidth0 \
+\cf7 \cb13 \}                                                
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+	\
+6. Mas, digamos que queiramos complicar a vide e que al\'e9m das strings de tecnologias, nosso array tenha que ter tamb\'e9m um objeto dentro dele onde teremos strings e n\'fameros\'85.\
+\
+Nesse caso, criamos mais uma interface detalhando qual o formato desse objeto que ser\'e1 inclu\'eddo e \'91colamos\'92 ele dentro do array\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 interface\cf10 \strokec10  \cf19 \strokec19 TechObject\cf10 \strokec10  \{ 												\cb1 \
+\cb9   tech\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 ,\cf7 \cb13 \outl0\strokewidth0 													\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   experience\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 number\cf10 \strokec10 ,\cf7 \cb13 \outl0\strokewidth0 												\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9 \}\cf7 \cb13 \outl0\strokewidth0 																\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf7 \cb13 \outl0\strokewidth0 																\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf8 \cb9 \strokec8 interface\cf10 \strokec10  \cf19 \strokec19 CreateUserData\cf10 \strokec10  \{\cf7 \cb13 \outl0\strokewidth0 											\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   nome\cf8 \strokec8 ?\cf10 \strokec10  \cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 ,\cf7 \cb13 \outl0\strokewidth0 													\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   email\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 ,\cf7 \cb13 \outl0\strokewidth0 													\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   password\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 ,\cf7 \cb13 \outl0\strokewidth0 													\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9   techs\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 Array\cf10 \strokec10 < \cf19 \strokec19 string\cf10 \strokec10  \cf8 \strokec8 |\cf10 \strokec10  \cf16 \strokec16 TechObject\cf10 \strokec10  >,\cf7 \cb13 \outl0\strokewidth0 									\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\cb9 \}\cf7 \cb13 \outl0\strokewidth0 																\cf10 \cb1 \outl0\strokewidth0 \strokec10 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+Dessa forma, sempre que formos criar tributos dentro do array techs, a IDE j\'e1 vai saber que dentro de techs podemos ter ou strings ou o tal TechObject. \
+\
+7. Uma outra forma mais f\'e1cil de se tipar arrays \'e9 assim\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1 \cf10 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10   techs\cf8 \strokec8 :\cf10 \strokec10  \cf19 \strokec19 string\cf10 \strokec10 []; \cb1 \
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Essa forma \'e9 mais f\'e1cil de ler e escrever por\'e9m funciona apenas para arrays que sejam constitu\'eddos com somente um mesmo tipo de dado}
